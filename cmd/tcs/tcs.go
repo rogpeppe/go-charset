@@ -2,10 +2,10 @@ package main
 
 import (
 	"bytes"
-	"code.google.com/p/go-charset/charset"
-	_ "code.google.com/p/go-charset/charset/iconv"
 	"flag"
 	"fmt"
+	"github.com/rogpeppe/go-charset/charset"
+	_ "github.com/rogpeppe/go-charset/charset/iconv"
 	"io"
 	"os"
 	"strings"
