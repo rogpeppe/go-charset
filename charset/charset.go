@@ -1,3 +1,7 @@
+// THIS PACKAGE IS NO LONGER MAINTAINED.
+//
+// Use golang.org/x/text/transform instead.
+//
 // The charset package implements translation between character sets.
 // It uses Unicode as the intermediate representation.
 // Because it can be large, the character set data is separated
