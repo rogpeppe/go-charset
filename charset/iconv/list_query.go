@@ -9,8 +9,6 @@ package iconv
 //#include <string.h>
 //#include <iconv.h>
 //#include <errno.h>
-//iconv_t iconv_open_error = (iconv_t)-1;
-//size_t iconv_error = (size_t)-1;
 //
 //typedef struct nameList nameList;
 //struct nameList {
@@ -49,6 +47,7 @@ import "C"
 
 import (
 	"sync"
+	"unsafe"
 )
 
 var getAliasesOnce sync.Once
@@ -56,6 +55,7 @@ var allAliases = map[string][]string{}
 
 func aliases() map[string][]string {
 	getAliasesOnce.Do(getAliases)
+	return allAliases
 }
 
 func getAliases() {
